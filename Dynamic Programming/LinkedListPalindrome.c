@@ -1,3 +1,6 @@
+/*
+Program to check if a Linked List is a Palindrome
+*/
 #include <stdio.h>
 #include <stdlib.h>
 struct ListNode {
