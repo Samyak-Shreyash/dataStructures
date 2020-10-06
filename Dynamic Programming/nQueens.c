@@ -1,5 +1,5 @@
 /*
-Gettng Position for all queens in a nxn Chess board
+Gettng Position for all queens in a nxn Chess board 
 */
 
 #include <stdio.h>
