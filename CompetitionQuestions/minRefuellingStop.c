@@ -2,5 +2,5 @@
 int main()
 {
     int n;
-    int 
+    return 0;
 }
