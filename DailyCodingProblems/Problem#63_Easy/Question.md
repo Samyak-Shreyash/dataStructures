@@ -11,4 +11,4 @@ For example, given the following matrix:
  ['M', 'A', 'S', 'S', 'R'],
  ['M', 'O', 'R', 'S','E']]
  ```
-and the target word `'FOAM'`, you should return true, since it's the leftmost column. Similarly, given the target word `'MASS'`, you should return * true*, since it's the last row.
+and the target word `'FOAM'`, you should return true, since it's the leftmost column. Similarly, given the target word `'MASS'`, you should return *true*, since it's the last row.
