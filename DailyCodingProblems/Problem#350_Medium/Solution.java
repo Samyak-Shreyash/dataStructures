@@ -4,40 +4,33 @@ public class Solution {
         int sqrt = (int)Math.sqrt(num);
         return (sqrt*sqrt == num);
     }
-    public static int checkSquares(int n, int beg, int ct)
+    public static int checkSquaresCount(int n, int ct)
     {
-        int newCt=-1, retCt =1000;
-        // Check if the Value is a Perfect Square
+        int newCt=-1;
         if(checkSquare(n)){
             return ct;
         }
-        int v=beg;
-        int sqr = v * v;
-        // Looping to  Check if the Value can be expressed as sum of 2 sqaures
-        while(sqr<=n-(sqr))
+        int v =1;
+        while(v*v<=n-(v*v))
         {
-            if(checkSquare(n-(sqr))){
+            if(checkSquare(n-(v*v))){
                 return ++ct;
             }
             v++;
-            sqr = v*v;
         }
-        // Looping to  Check if the Value can be expressed as sum of more than 2 sqaures
-        v = beg;
-        while(v*v<=n-(v*v))
+        v =1;
+        while(newCt<0 && v*v<=n-(v*v))
         {
-            newCt =checkSquares(n-(v*v), (beg+1), (ct+1));
-            if(newCt!=1000)
-            if(newCt<retCt)
-            {
-                retCt = newCt;
-            }
+            newCt =checkSquaresCount(n-(v*v), (ct+1));
             v++;
         }
-        return retCt;
+        return newCt;
     }
     public static void main(String[] args) {
-        int n=807;
-        System.out.println("Final Return Value is: "+checkSquares(n,1, 1));
+        for(int i=0;i<10;i++)
+        {
+            int n = (int) (Math.random()*1000.0);
+            System.out.println("Perfect Squares Counting up to "+n+" is "+checkSquaresCount(n,1));
+        }
     }
 }
