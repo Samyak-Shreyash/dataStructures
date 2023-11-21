@@ -11,9 +11,8 @@ int getSubset(int* arr, int n, int sum)
        return getSubset(arr, n-1, sum);
     else
         return (getSubset(arr, n-1, sum-arr[n-1]) || getSubset(arr, n-1, sum));
-
-
 }
+
 int main()
 {
     int n,sum=0;
